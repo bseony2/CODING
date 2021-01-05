@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class bj_1149 {
     public static void main(String[] args) {
@@ -22,6 +21,7 @@ public class bj_1149 {
             cost[i][2] = cost[i][2] + Math.min(cost[i-1][0], cost[i-1][1]);
         }
 
+        scan.close();
         System.out.println(Math.min(cost[N][0], Math.min(cost[N][1], cost[N][2])));
     }
 }

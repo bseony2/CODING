@@ -37,6 +37,7 @@ public class bj_1668 {
             }
         }
         System.out.println(result);
+        scan.close();
     }
 }
 

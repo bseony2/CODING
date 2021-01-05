@@ -14,12 +14,13 @@ public class bj_1476 {
         while(loof)
         {
             year++;
-            if(((year -E) % 15 ==0) && ((year -S) % 28 ==0) && ((year -M) % 19 ==0))
+            if(((year - E) % 15 ==0) && ((year - S) % 28 ==0) && ((year - M) % 19 ==0))
             {
                 loof = false;
                 break;
             }
         }
         System.out.println(year);
+        scan.close();
     }
 }

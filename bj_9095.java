@@ -18,5 +18,6 @@ public class bj_9095 {
 
         for(int i=0;i<T;i++)
             System.out.println(result[Integer.parseInt(scan.nextLine())]);
+        scan.close();
     }
 }
