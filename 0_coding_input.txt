@@ -71,3 +71,24 @@ scan.nextLine();            //문자열 입력
 그래도 속도가 느려서 코딩 테스트용으로 썩 좋지는 않음
 
 (시간 초과나는 경우도 있음)
+
+
+# StringBuilder
+
+```java
+StringBuilder sb = new StringBuilder();
+sb.append() -> 문자,문자열, 정수, 실수 다 가능
+sb.toString
+```
+
+겁나 빠름 
+
+ArrayList<> 사용하였을 때 시간초과가 나서 StringBuilder를 사용했는데
+
+시간초과가 나지 않았음
+
+대신 한 문자열로 입력을 받기 때문에 println을 위해서는
+
+'\n'을 중간중간 직접 넣어야함
+
+sb.append(value).append('\n')와 같은 식으로
