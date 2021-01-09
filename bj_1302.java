@@ -1,5 +1,3 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Collections;
 import java.util.ArrayList;
@@ -8,7 +6,6 @@ import java.util.Scanner;
 public class bj_1302 {
     
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Scanner scan = new Scanner(System.in);
         int N = Integer.parseInt(scan.nextLine());
         HashMap<String, Integer>map = new HashMap<String, Integer>();
@@ -36,6 +33,7 @@ public class bj_1302 {
         }
 
         Collections.sort(al);
+        scan.close();
         System.out.println(al.get(0));
     }
 }

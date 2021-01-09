@@ -20,6 +20,7 @@ public class bj_1543 {
         }
 
         System.out.println(result);
+        scan.close();
     }
 }
 
