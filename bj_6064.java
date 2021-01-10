@@ -11,15 +11,8 @@ public class bj_6064 {
             x = scan.nextInt(); y = scan.nextInt();
 
             int gcd = 0;
-            while(true)
-            {
-                year++;
-                if((year % M) == 0 && (year % N) == 0)
-                {
-                    gcd = year;
-                    break;
-                }
-            }
+            
+            int max = M * N;
             year = (x>y) ? x : y;
             while(true)
             {
@@ -29,7 +22,7 @@ public class bj_6064 {
                     break;
                 }
                 year += (x>y) ? M : N;
-                if (year> gcd)
+                if (year> max)
                 {
                     System.out.println(-1);
                     break;
