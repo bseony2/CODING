@@ -17,5 +17,6 @@ public class bj_9461 {
         {
             System.out.println(dp[scan.nextInt()]);
         }
+        scan.close();
     }
 }

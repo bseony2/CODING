@@ -21,5 +21,6 @@ public class bj_1932 {
 			}
 		}
 		System.out.println(max);
+		scan.close();
 	}
 }
