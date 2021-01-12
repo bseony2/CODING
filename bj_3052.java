@@ -1,7 +1,6 @@
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class bj_3052 {
     public static void main(String[] args) {
