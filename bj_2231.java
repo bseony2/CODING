@@ -4,15 +4,9 @@ public class bj_2231 {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         int tmp = n, tmp2;
-        int num = 1; //자릿수
+        int num = String.valueOf(n).length();
         int find = 0;
-        while(true)
-        {
-            if(tmp/10 == 0)
-                break;
-            tmp = tmp/10;
-            num++;
-        }
+
         tmp = n - num*9;
 
         for(int i=(n-num*9); i<n;i++)
@@ -34,10 +28,7 @@ public class bj_2231 {
                 break;
             }
         }
-        if(find>0)
-            System.out.println(find);
-        else
-            System.out.println(0);
+        System.out.println(find);
         scan.close();
     }
 }
