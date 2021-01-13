@@ -9,8 +9,6 @@ public class bj_6064 {
         {
             M = scan.nextInt(); N = scan.nextInt();
             x = scan.nextInt(); y = scan.nextInt();
-
-            int gcd = 0;
             
             int max = M * N;
             year = (x>y) ? x : y;
@@ -29,5 +27,6 @@ public class bj_6064 {
                 }
             }
         }
+        scan.close();
     }
 }
