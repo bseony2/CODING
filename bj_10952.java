@@ -10,5 +10,6 @@ public class bj_10952 {
             else
                 System.out.println(a+b);
         }
+        scan.close();
     }
 }
