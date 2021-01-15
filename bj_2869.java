@@ -9,5 +9,6 @@ public class bj_2869 {
         long B = Long.parseLong(tmp[1]);
         long V = Long.parseLong(tmp[2]);
         long ans = 1 + (((V-A)%(A-B) == 0 ? (V-A)/(A-B) : ((V-A)/(A-B)) + 1));
+        System.out.println(ans);
     }
 }
