@@ -8,7 +8,7 @@ for i in range(n):
     list.append([a, b])
 list.sort(key = lambda x:(x[0]))
 list.sort(key = lambda x:(x[1]))
-# list.sort(key = lambda x:(x[1]x[0]))
+# list.sort(key = lambda x:(x[1],x[0]))
 
 cnt = 1 
 end_time = list[0][1] 
