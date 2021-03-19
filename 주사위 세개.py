@@ -13,7 +13,6 @@ for i in list :
         if(j==len(result)-1) : result.append([i, 1])
 
 result.sort()
-print(result)
 
 if(len(result) == 3):
     print(result[-1][0] * 100)
