@@ -21,32 +21,7 @@ def solution(n, edge):
     answer = result.count(max(result))
     return answer
 # -------------------------------------------------------
-from collections import deque
 
-def solution(n,vertex):
-    def bfs():
-        de = deque()
-        de.append(1)
-
-        while de :
-            x = de.popleft()
-            for i in a[x]:
-                if ch[i]==-1:
-                    ch[i]=ch[x]+1
-                    de.append(i)
-
-    a=[[] for i in range(n+1)]
-    ch=[-1]*(n+1)
-
-    for i,j in vertex:
-        a[i].append(j)
-        a[j].append(i)
-    
-    ch[1]=0
-    bfs()
-    return ch.count(max(ch))
-
-print(solution(6, [[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]))
 
 
 
@@ -85,7 +60,7 @@ print(solution(6, [[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]))
 #     answer = result.count(max(result))
 #     return answer
 
-#느려서 실패한 코드 2
+# 느려서 실패한 코드 2  
 # from collections import deque
 
 # def solution(n, edge):
@@ -101,7 +76,7 @@ print(solution(6, [[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]))
 #     need_visit.append(1)
 #     while(need_visit):
 #         node = need_visit.popleft()
-#         #if(node in visited) : continue
+#         if(node in visited) : continue
 #         visited.append(node)
 #         need_visit.extend(graph[node])
         
@@ -110,3 +85,33 @@ print(solution(6, [[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]))
     
 #     answer = result.count(max(result))
 #     return answer
+
+
+#----------------------------------------------------------
+# 상범이 코드
+# from collections import deque
+
+# def solution(n,vertex):
+#     def bfs():
+#         de = deque()
+#         de.append(1)
+
+#         while de :
+#             x = de.popleft()
+#             for i in a[x]:
+#                 if ch[i]==-1:
+#                     ch[i]=ch[x]+1
+#                     de.append(i)
+
+#     a=[[] for i in range(n+1)]
+#     ch=[-1]*(n+1)
+
+#     for i,j in vertex:
+#         a[i].append(j)
+#         a[j].append(i)
+    
+#     ch[1]=0
+#     bfs()
+#     return ch.count(max(ch))
+
+# print(solution(6, [[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]))
