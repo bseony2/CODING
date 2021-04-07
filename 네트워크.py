@@ -22,6 +22,3 @@ def solution(n, computers):
                     list[j].update(list[i])
 
     return answer
-
-print(solution(5, [[1, 0, 0, 0, 0], [0, 1, 1, 1, 0], [0, 1, 1, 0, 1], [0, 1, 0, 1, 0], [0, 0, 1, 0, 1]]))
-print(solution(4, [[1, 0, 0, 0], [0, 1, 1, 1], [0, 1, 1, 0], [0, 1, 0, 1]]))
