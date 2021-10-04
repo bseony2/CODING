@@ -26,12 +26,7 @@ def construct(string) :
             answer += (string[:s])
             return answer + construct(string[s:])
         elif(isBalancedString(string[:s])) : #u가 균형잡힌 문자열일 경우
-            #if string[:s] == ')(' : return '()'
-            blankString =''
-            blankString += ('(') 
-            blankString += construct(string[s:])
-            blankString += (')')
-            blankString += (reversString(string[1:s -1]))
+            blankString = '(' +  construct(string[s:]) + ')' + (reversString(string[1:s -1]))
             return blankString
     return answer
 
