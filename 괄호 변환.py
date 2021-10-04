@@ -24,9 +24,7 @@ def construct(string) :
     for s in range(1, len(string) + 1) : 
         if(isCorrectString(string[:s])) : #u가 올바른 문자열일 경우
             answer += (string[:s])
-            constructResult = construct(string[s:])
-            answer += constructResult
-            return answer
+            return answer + construct(string[s:])
         elif(isBalancedString(string[:s])) : #u가 균형잡힌 문자열일 경우
             #if string[:s] == ')(' : return '()'
             blankString =''
@@ -39,8 +37,7 @@ def construct(string) :
 
 def solution(string):
     if(isCorrectString(string)) : return string
-    answer = construct(string)
-    return answer
+    return construct(string)
 
 
 print(solution("()))((()"))
