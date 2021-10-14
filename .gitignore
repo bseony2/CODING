@@ -1,0 +1,6 @@
+자료구조/**/*.dSYM
+*.md
+*.log
+*.bak
+*.json
+*.plist
