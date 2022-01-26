@@ -1,5 +1,5 @@
 import java.util.*;
-public class 고유한이메일{
+public class Solution{
 	static StringBuilder sb;
 	static Set<String> set = new HashSet<String>();
 	
@@ -8,13 +8,13 @@ public class 고유한이메일{
 		proceed("test.e.mail+toto.jane@coding.com");
 		proceed("testemail+tom@cod.ing.com");
 		
-		System.out.println(set.size());
+		System.out.println(set.toString());
 	}
 	
 	static public void proceed(String email) {
 		int splitPoint = email.indexOf('@');
 		sb = new StringBuilder(splitPoint);
-		String local = email.substring(0, splitPoint + 1);
+		String local = email.substring(0, splitPoint);
 		for(int i=0; i<local.length(); i++)
 		{
 			if(local.charAt(i) == '.')
@@ -24,6 +24,7 @@ public class 고유한이메일{
 			else
 				sb.append(local.charAt(i));
 		}
+		sb.append("@");
 		sb.append(email.substring(splitPoint + 1, email.length()));
 		set.add(sb.toString());
 	}
