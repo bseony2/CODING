@@ -6,8 +6,8 @@ class Solution {
         
         for(int i= 3; i<n + 1; i++) {
             answer = (pre + post) % 1234567;
-            pre = post % 1234567;
-            post = answer % 1234567;
+            pre = post;
+            post = answer;
         }
         
         return n == 0 ? 0 : answer;
