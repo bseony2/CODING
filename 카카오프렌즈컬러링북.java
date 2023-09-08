@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-class 카카오프렌즈컬러링북 {
+public class 카카오프렌즈컬러링북 {
 
     int[][] pictures;
     int[] dy = {-1, 1, 0, 0}; //위, 아래, 오른쪽, 왼쪽
@@ -58,13 +58,5 @@ class 카카오프렌즈컬러링북 {
         answer[0] = numberOfArea;
         answer[1] = maxSizeOfOneArea;
         return answer;
-    }
-}
-
-class Main{
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        int[][] picture = {{1, 1, 1, 0}, {1, 1, 1, 0}, {0, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 1}};
-        System.out.println(solution.solution(6, 4, picture));
     }
 }
