@@ -1,5 +1,5 @@
 import java.util.*;
-public class Solution{
+public class 고유한이메일{
 	static StringBuilder sb;
 	static Set<String> set = new HashSet<String>();
 	

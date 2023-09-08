@@ -1,4 +1,4 @@
-class Solution {
+class 피보나치수 {
     public int solution(int n) {
         int answer = 1;
         int pre = 1;

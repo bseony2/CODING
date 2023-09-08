@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Solution {
+class 카카오프렌즈컬러링북 {
 
     int[][] pictures;
     int[] dy = {-1, 1, 0, 0}; //위, 아래, 오른쪽, 왼쪽

@@ -1,6 +1,6 @@
 import java.lang.Math;
 
-class Solution {
+class 숫자의표현 {
     public int solution(int n) {
         if(n == 1)
 			return 1;
