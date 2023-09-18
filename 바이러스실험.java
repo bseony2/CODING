@@ -4,7 +4,6 @@ public class 바이러스실험 {
 	static int N, M, K, turn=0;
 	static int[][] nut;
 	static List<Integer>[][] virusMap;
-	static Queue<Virus> deadVirus = new LinkedList<>();
 	static int[][] nutMap;
 	static int[] dr = new int[] {-1, -1, 0, 1, 1, 1, 0, -1};
 	static int[] dc = new int[] {0, 1, 1, 1, 0, -1, -1, -1};
@@ -126,18 +125,5 @@ public class 바이러스실험 {
 	
 	static boolean isValidPoint(int r, int c) {
 		return 0<=r && r<N && 0<=c && c<N;
-	}
-
-	static class Virus implements Comparable<Virus>{
-		int age, count;
-
-		public Virus(int age) {
-			this.age = age;
-		}
-		
-		public int compareTo(Virus virus) {
-			return this.age - virus.age;
-		}
-		
 	}
 }
