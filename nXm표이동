@@ -1,0 +1,68 @@
+import java.util.*;
+import java.io.*;
+
+public class nXm표이동 {
+
+	static int N, M;
+	static int[][] map, distance;
+	static boolean[][] isVisited;
+	static int[] dr = new int[] { 0, 1, 0, -1 };
+	static int[] dc = new int[] { 1, 0, -1, 0 };
+
+	public static void main(String[] args) throws IOException {
+		init();
+
+		bfs();
+
+		System.out.println(distance[N - 1][M - 1]);
+	}
+
+	static void init() throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+		N = Integer.parseInt(st.nextToken());
+		M = Integer.parseInt(st.nextToken());
+		map = new int[N][M];
+		distance = new int[N][M];
+		isVisited = new boolean[N][M];
+
+		for (int i = 0; i < N; i++) {
+			st = new StringTokenizer(br.readLine(), " ");
+			for (int j = 0; j < M; j++) {
+				map[i][j] = Integer.parseInt(st.nextToken());
+			}
+		}
+	}
+
+	static void bfs() {
+		Queue<Integer> queue = new LinkedList<>();
+		isVisited[0][0] = true;
+		distance[0][0] = 1;
+		queue.add(0);
+		queue.add(0);
+
+		while (!queue.isEmpty()) {
+			int r = queue.poll();
+			int c = queue.poll();
+
+			for (int i = 0; i < 4; i++) {
+				int nr = r + dr[i];
+				int nc = c + dc[i];
+
+				if (!isValidPoint(nr, nc) || map[nr][nc] == 0 || isVisited[nr][nc])
+					continue;
+
+				distance[nr][nc] = distance[r][c] + 1;
+				isVisited[nr][nc] = true;
+				queue.add(nr);
+				queue.add(nc);
+				if (nr == N - 1 && nc == M - 1)
+					return;
+			}
+		}
+	}
+
+	static boolean isValidPoint(int r, int c) {
+		return 0 <= r && r < N && 0 <= c && c < M;
+	}
+}
